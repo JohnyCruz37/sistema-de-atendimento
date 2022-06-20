@@ -1,0 +1,14 @@
+
+
+
+// POSICIONAMENTO
+@mixin center-hv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center-linha-quebra {
+    display: flex;
+    flex-flow: row wrap;
+}

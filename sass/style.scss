@@ -1,0 +1,38 @@
+@use 'variaveis';
+@use  'mixins';
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// elementos HTML  
+body{
+    @include mixins.center-hv;
+
+    .main{
+        // border: 1px solid red;
+        width: 95vw;
+        height: 100vh;
+        @include mixins.flex-linha-quebra;
+
+        .area-gera-senha{
+            border: 1px solid yellow;
+            width: 50%;
+            height: 50%;
+        }
+
+        .area-monitor{
+            border: 1px solid orange;
+            width: 50%;
+            height: 50%;
+        }
+
+        .area-guiche{
+            border: 1px solid green;
+            width: 100%;
+            height: auto;
+        }
+
+    }
+}

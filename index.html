@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de atendimento</title>
+
+    <!-- CSS DO PROJETO -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JAVA SCRIPT DO PROJETO -->
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+    <main class="main">
+        <!-- GERAR NOVAS SENHAS -->
+        <section class="area-gera-senha">
+            <div class="gera senha">
+                <div class="gera-senha-visor"></div>
+                <article class="gera-senha-autoatendimento"></article>
+            </div>
+            <article class="gera-senha-ticket">
+                <div class="ticket-logo"></div>
+                <p class="ticket-titulo">atendimento</p>
+                <p class="ticket-senha">senha:</p>
+                <h4>p - 004 </h4>
+                <p class="ticket-data"></p>
+                <div class="ticket-previsao">
+                    <p class="previsao-msg">A previsão de espera é de:</p>
+                    <p class="previsao-tempo">5 minutos</p>
+                </div>
+            </article>
+        </section>
+        <section class="area-monitor">
+            <div class="monitor">
+                <article class="monitor-header">
+                    <div class="data">
+                        <div class="hora">12:00</div>
+                        <div class="dia">
+                            <p>1 de janeiro de 2022</p>
+                            <p>Segunda feira</p>
+                        </div>
+                    </div>
+                    <div class="monitor-atendimento">
+                        <h1>atendimento</h1>
+                    </div>
+                    <div class="monitor-tipo-atendimento">
+                        <h2>Preferencial</h2>
+                    </div>
+
+                </article>
+                <article class="monitor-body">
+                    <div class="monitor-senha">
+                        <h3>senha:</h3>
+                        <h4>p - 004 </h4>
+                    </div>
+                    <div class="monitor-guiche">
+                        <h3>guichê:</h3>
+                        <h4>01 </h4>
+                    </div>
+                </article>
+
+
+                <article class="monitor-historico">
+                    <div class="monitor-historico-card">
+                        <h5>p - 001</h5>
+                        <h6>guichê 1</h6>
+                    </div>
+                    <div class="monitor-historico-card">
+                        <h5>p - 002</h5>
+                        <h6>guichê 2</h6>
+                    </div>
+                    <div class="monitor-historico-card">
+                        <h5>p - 003</h5>
+                        <h6>guichê 3</h6>
+                    </div>
+                    
+                </article>
+            </div>
+        </section>
+        <section class="area-guiche">
+            <div class="guiche-titulo">
+                <h3>guichê 1</h3>
+            </div>
+            <div class="guiche-balcao"></div>
+            <div class="guiche-botoes">
+                <button>próximo</button>
+                <button>repetir chamada</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
