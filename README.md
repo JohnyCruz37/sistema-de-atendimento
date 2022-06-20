@@ -11,4 +11,5 @@ Objetivo: Criar um sistema de geração de senhas. Com uma ordem preferencial e 
     <li>Assim que uma nova senha for gerada deve ir para o final da fila;</li>
     <li>As preferencias ao ser criada de ficar em último lugar com relação as outra preferencias; ou seja, caso exista uma senha preferencial em primeiro lugar na fila e seja gerada uma nova senha preferencial esta deve ficar na posição número dois da fila.
     </li>
+    <li>Desenvolver tutorial de primeiro acesso</li>
 </ol>
