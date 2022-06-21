@@ -1,12 +1,13 @@
 @use 'variaveis';
 @use  'mixins';
 
-@mixin flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 // elementos HTML  
+*{
+    
+    box-sizing: border-box;
+}
+
 body{
     @include mixins.center-hv;
 
@@ -14,24 +15,129 @@ body{
         // border: 1px solid red;
         width: 95vw;
         height: 100vh;
-        @include mixins.flex-linha-quebra;
+        @include mixins.linha-quebra;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
 
         .area-gera-senha{
-            border: 1px solid yellow;
-            width: 50%;
-            height: 50%;
+            @include mixins.linha-quebra;
+            @include mixins.container;
+
+            .gera-senha{
+                @include mixins.center-v;
+                @include mixins.container;
+
+                // border: 1px solid red;
+                border-radius: 15px;
+                width: 60%;
+                height: auto;
+
+                justify-content: center;
+
+                &-visor{
+                    border: 1px solid;
+                    border-radius: 10px;
+                    width: 85%;
+                    height: 15%;
+                }
+                &-autoatendimento{
+                    @include mixins.center-v;
+                    
+                    // border: 1px solid orange;
+                    width: 85%;
+                    height: 65%;
+                    margin-top: 15px;
+
+                    justify-content: space-around;
+
+                    &-botoes{
+                        border-radius: 10px;
+                        width: 80%;
+                        height: 20%;
+
+                        cursor: pointer;
+
+                    }
+                    .gerenciador{
+                        width: 30%;
+                        margin-top: 25px;
+                        margin-left: 50%;
+
+                        
+                    }
+
+                }
+
+            }
+
+            .gera-senha-ticket{
+                @include mixins.container;
+                @include mixins.center-v;
+                width: 30%;
+                height: auto;
+
+                &-titulo{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    height: auto;
+                    margin: 15% 0;
+                    
+                    font-weight: bolder;
+                    text-transform: capitalize;
+
+                }
+                &-senha{
+                    display: block;
+                    width: 100%;
+                    padding-left: 15px;
+
+                    text-transform: capitalize;
+                    text-decoration: underline;
+                }
+                &-numero{
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin: 10% 0;
+
+
+                    text-align: center;
+                    font-size: 3rem;
+                    text-transform: capitalize;
+
+                }
+                &-data{
+                    line-height: 1.5em;
+                }
+                &-previsao{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 10px;
+
+                    line-height: 1.5rem;
+                }
+
+                
+            }
+            
         }
 
         .area-monitor{
-            border: 1px solid orange;
-            width: 50%;
-            height: 50%;
+            @include mixins.container;
+
+
+            
         }
 
         .area-guiche{
-            border: 1px solid green;
-            width: 100%;
-            height: auto;
+            @include mixins.container;
+
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            
         }
 
     }

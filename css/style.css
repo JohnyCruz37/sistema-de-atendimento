@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -7,20 +11,108 @@ body .main {
   width: 95vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 body .main .area-gera-senha {
-  border: 1px solid yellow;
-  width: 50%;
-  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border: 1px solid;
+  padding: 5px;
+}
+body .main .area-gera-senha .gera-senha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 15px;
+  width: 60%;
+  height: auto;
+  justify-content: center;
+}
+body .main .area-gera-senha .gera-senha-visor {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 85%;
+  height: 15%;
+}
+body .main .area-gera-senha .gera-senha-autoatendimento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 65%;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+body .main .area-gera-senha .gera-senha-autoatendimento-botoes {
+  border-radius: 10px;
+  width: 80%;
+  height: 20%;
+  cursor: pointer;
+}
+body .main .area-gera-senha .gera-senha-autoatendimento .gerenciador {
+  width: 30%;
+  margin-top: 25px;
+  margin-left: 50%;
+}
+body .main .area-gera-senha .gera-senha-ticket {
+  border: 1px solid;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: auto;
+}
+body .main .area-gera-senha .gera-senha-ticket-titulo {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 15% 0;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+body .main .area-gera-senha .gera-senha-ticket-senha {
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+body .main .area-gera-senha .gera-senha-ticket-numero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10% 0;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+body .main .area-gera-senha .gera-senha-ticket-data {
+  line-height: 1.5em;
+}
+body .main .area-gera-senha .gera-senha-ticket-previsao {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  line-height: 1.5rem;
 }
 body .main .area-monitor {
-  border: 1px solid orange;
-  width: 50%;
-  height: 50%;
+  border: 1px solid;
+  padding: 5px;
 }
 body .main .area-guiche {
-  border: 1px solid green;
+  border: 1px solid;
+  padding: 5px;
+  grid-column: 1/3;
+  grid-row: 2/3;
 }
 
 /*# sourceMappingURL=style.css.map */

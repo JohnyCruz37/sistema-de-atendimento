@@ -1,5 +1,9 @@
 
-
+@mixin container {
+    border: 1px solid ;
+    padding: 5px;
+    
+}
 
 // POSICIONAMENTO
 @mixin center-hv {
@@ -8,7 +12,15 @@
     align-items: center;
 }
 
-@mixin center-linha-quebra {
+@mixin linha-quebra {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
+
+@mixin center-v{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
