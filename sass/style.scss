@@ -31,10 +31,10 @@ body{
 
         .area-gera-senha{
             @include dflex(row, space-around);
-            border: 1px solid green;
+            // border: 1px solid green;
             .gera-senha{
                 @include dflex(column, center);
-                border: 1px solid red;
+                border: 1px solid #ccc;
                 border-radius: 15px;
                 width: 60%;
                 height: 80%;
@@ -162,17 +162,15 @@ body{
 
                     &-titulo{
                         @include dflex(row, center);
+                        @include wheigth(30px);
                         border: 1px solid;
-                        width: 100%;
-                        height: 30px;
 
                         text-transform: capitalize;
 
                     }
                     &-itens{
+                        @include wheigth(calc(100%-30px));
                         // border: 1px solid yellow;
-                        width: 100%;
-                        height: calc(100% - 30px);
 
                         h4{
                             border-bottom: 1px solid #ccc;
@@ -199,9 +197,8 @@ body{
 
                 .conjunto-botoes{
                     @include dflex(column, space-around);
+                    @include wheigth(30%);
                     // border: 1px solid gray;
-                    width: 100%;
-                    height: 30%;
 
                     .btn-gerenciador{
                         height: 40%;
@@ -214,10 +211,67 @@ body{
         }
 
         .area-monitor{
+            @include container;
             border: 1px solid red;
 
             grid-column: 1 / 2;
             grid-row: 2 / 3;
+
+            .monitor{
+                @include wheigth(100%);
+                @include dflex(column, flex-start);
+
+                &-header{
+                    @include dflex(row, flex-start);
+                    @include wheigth(25%);
+                    border: 1px solid yellow;
+
+                    .header-titulo{
+                        @include dflex(column, flex-end);
+                        border: 1px solid blue;
+                        width: 50%;
+                        height: 50%;
+
+                        h1{
+                            font-size: 1.6rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .header-data{
+                        @include dflex(row, space-around);
+                        border: 1px solid green;
+                        width: 50%;
+                        height: 50%;
+
+                        .hora{
+                            font-size: 1.2rem;
+                        }
+                        .dia{
+                            text-align: center;
+                        }
+                    }
+                    .header-tipo-atendimento{
+                        @include wheigth(50%);
+                        @include dflex(column, center);
+                        // border: 1px solid violet;
+
+                        h2{
+                            font-size: 1.3rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                    
+                }
+                &-body{
+                    @include wheigth(37.5%);
+                    border: 1px solid orange;
+                }
+                &-historico{
+                    @include wheigth(37.5%);
+                    border: 1px solid blue;
+                }
+
+            }
 
             
         }

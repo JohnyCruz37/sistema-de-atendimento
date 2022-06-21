@@ -1,7 +1,6 @@
 
 
 @mixin container {
-    border: 1px solid ;
     padding: 5px;
     
 }
@@ -10,13 +9,16 @@
 @mixin dflex($direcao, $alinhamento){
     display: flex;
     flex-direction: $direcao;
+    flex-wrap: wrap;
     justify-content: $alinhamento;
     align-items: center;
 }
 
-@mixin container {
-    padding: 5px;
-}
+
+@mixin wheigth($altura) {
+    width: 100%;
+    height: $altura;
+} 
 
 
 
