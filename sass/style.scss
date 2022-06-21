@@ -1,50 +1,52 @@
-@use 'variaveis';
-@use  'mixins';
+@import "./cores";
+@import "./mixins";
 
 
-// elementos HTML  
-*{
+* {
     
     box-sizing: border-box;
 }
+// CLASSES GENERICAS
+.botoes{
+    border-radius: 10px;
+    width: 80%;
+    height: 20%;
+    margin-top: 15px;
 
-body{
-    @include mixins.center-hv;
+    cursor: pointer;
+
+}
+
+body{   
+    @include dflex(column, center);
 
     .main{
         // border: 1px solid red;
         width: 95vw;
         height: 100vh;
-        @include mixins.linha-quebra;
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
 
         .area-gera-senha{
-            @include mixins.linha-quebra;
-            @include mixins.container;
-
+            @include dflex(row, space-around);
+            border: 1px solid green;
             .gera-senha{
-                @include mixins.center-v;
-                @include mixins.container;
-
-                // border: 1px solid red;
+                @include dflex(column, center);
+                border: 1px solid red;
                 border-radius: 15px;
                 width: 60%;
-                height: auto;
-
-                justify-content: center;
+                height: 80%;
 
                 &-visor{
                     border: 1px solid;
                     border-radius: 10px;
                     width: 85%;
-                    height: 15%;
+                    height: 30px;
                 }
                 &-autoatendimento{
-                    @include mixins.center-v;
-                    
+                    @include dflex(column, center);
                     // border: 1px solid orange;
                     width: 85%;
                     height: 65%;
@@ -52,14 +54,6 @@ body{
 
                     justify-content: space-around;
 
-                    &-botoes{
-                        border-radius: 10px;
-                        width: 80%;
-                        height: 20%;
-
-                        cursor: pointer;
-
-                    }
                     .gerenciador{
                         width: 30%;
                         margin-top: 25px;
@@ -73,8 +67,8 @@ body{
             }
 
             .gera-senha-ticket{
-                @include mixins.container;
-                @include mixins.center-v;
+                @include container;
+                border: 1px solid;
                 width: 30%;
                 height: auto;
 
@@ -124,18 +118,114 @@ body{
             }
             
         }
+        .area-gerenciador{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            // border: 1px solid red;
+            padding: 20px;
+
+
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 30% 70%;
+            grid-gap: 5px;
+
+            .gerenciador-titulo{
+                @include dflex(column, flex-end);
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+                border-bottom: 1px solid;
+
+                text-transform: uppercase;
+
+                h3{
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                }
+
+
+            }
+            .gerenciador-listas{
+                @include dflex(row, space-around);
+
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;    
+                border-right: 1px solid;
+
+                .lista{
+                    border: 1px solid;
+                    width: 25%;
+                    height: 80%;
+                    
+                    text-align: center;
+
+                    &-titulo{
+                        @include dflex(row, center);
+                        border: 1px solid;
+                        width: 100%;
+                        height: 30px;
+
+                        text-transform: capitalize;
+
+                    }
+                    &-itens{
+                        // border: 1px solid yellow;
+                        width: 100%;
+                        height: calc(100% - 30px);
+
+                        h4{
+                            border-bottom: 1px solid #ccc;
+                            display: block;
+
+                            padding: .3rem;
+
+                            text-transform: capitalize;
+
+                            cursor: pointer;
+                        }
+                        h4:hover{
+                            background-color: #ccc;
+                        }
+                    }
+                }
+
+            }
+            .gerenciador-botoes{
+                @include dflex(column, space-around);
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                border-left: 1px solid;
+
+                .conjunto-botoes{
+                    @include dflex(column, space-around);
+                    // border: 1px solid gray;
+                    width: 100%;
+                    height: 30%;
+
+                    .btn-gerenciador{
+                        height: 40%;
+                        margin: 0;
+                    }
+
+                }
+
+            }
+        }
 
         .area-monitor{
-            @include mixins.container;
+            border: 1px solid red;
 
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
 
             
         }
 
         .area-guiche{
-            @include mixins.container;
+            border: 1px solid orange;
 
-            grid-column: 1 / 3;
+            grid-column: 2 / 3;
             grid-row: 2 / 3;
             
         }

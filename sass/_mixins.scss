@@ -1,0 +1,22 @@
+
+
+@mixin container {
+    border: 1px solid ;
+    padding: 5px;
+    
+}
+
+// POSICIONAMENTO
+@mixin dflex($direcao, $alinhamento){
+    display: flex;
+    flex-direction: $direcao;
+    justify-content: $alinhamento;
+    align-items: center;
+}
+
+@mixin container {
+    padding: 5px;
+}
+
+
+
