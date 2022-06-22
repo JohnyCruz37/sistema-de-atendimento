@@ -118,6 +118,7 @@ body{
             }
             
         }
+
         .area-gerenciador{
             grid-column: 2 / 3;
             grid-row: 1 / 2;
@@ -169,7 +170,7 @@ body{
 
                     }
                     &-itens{
-                        @include wheigth(calc(100%-30px));
+                        @include wheigth(calc(100% - 30px));
                         // border: 1px solid yellow;
 
                         h4{
@@ -212,7 +213,7 @@ body{
 
         .area-monitor{
             @include container;
-            border: 1px solid red;
+            // border: 1px solid red;
 
             grid-column: 1 / 2;
             grid-row: 2 / 3;
@@ -224,11 +225,11 @@ body{
                 &-header{
                     @include dflex(row, flex-start);
                     @include wheigth(25%);
-                    border: 1px solid yellow;
+                    // border: 1px solid yellow;
 
                     .header-titulo{
                         @include dflex(column, flex-end);
-                        border: 1px solid blue;
+                        // border: 1px solid blue;
                         width: 50%;
                         height: 50%;
 
@@ -238,16 +239,23 @@ body{
                         }
                     }
                     .header-data{
-                        @include dflex(row, space-around);
-                        border: 1px solid green;
+                        @include dflex(row, flex-end);
+                        // border: 1px solid green;
+                        background-color: blue;
                         width: 50%;
                         height: 50%;
+                        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 30% 100%);
 
                         .hora{
                             font-size: 1.2rem;
+                            color: white;
                         }
                         .dia{
                             text-align: center;
+                            display: block;
+                            padding: 5px;
+                            margin: 0 10px 0 35px;
+                            color: white;
                         }
                     }
                     .header-tipo-atendimento{
@@ -256,19 +264,79 @@ body{
                         // border: 1px solid violet;
 
                         h2{
-                            font-size: 1.3rem;
+                            font-size: 1.5rem;
                             text-transform: capitalize;
                         }
                     }
                     
                 }
+
                 &-body{
                     @include wheigth(37.5%);
-                    border: 1px solid orange;
+                    @include dflex(row, space-around);
+                    // border: 1px solid orange;
+
+                    &-senha{
+                        @include container;
+                        // border: 1px solid red;
+                        width: 60%;
+                        height: 100%;
+
+                        h3{
+                            text-transform: capitalize;
+                            margin-left: 30px;
+                        }
+
+                        h4{
+                            margin-left: 30px;
+                            font-size: 5rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                    &-guiche{
+                        @include container;
+                        @include dflex(column, center);
+                        // border: 1px solid blue;
+                        width: 40%;
+                        height: 100%;
+
+                        h3{
+                            text-transform: capitalize;
+                        }
+
+                        h4{
+                            font-size: 6rem
+                        }
+                    }
                 }
                 &-historico{
+                    @include container;
                     @include wheigth(37.5%);
-                    border: 1px solid blue;
+                    @include dflex(row, space-around);
+                    border-top: 1px solid blue;
+
+                    &-card{
+                        @include container;
+                        border: 1px solid;
+                        border-radius: 10px;
+                        width: 30%;
+                        height: 100%;
+
+                        h5, h6{
+                            @include wheigth(50%);
+                            @include dflex(column, center);
+                            display: block;
+                            text-transform: capitalize;
+                            text-align: center;
+                        }
+                        h5{
+                            font-size: 3.5rem;
+                        }
+                        h6{
+                            @include dflex(column, center);
+                            font-size: 2rem;
+                        }
+                    }
                 }
 
             }
