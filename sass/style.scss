@@ -29,6 +29,7 @@ body{
     @include dflex(column, center);
 
     .main{
+
         // border: 1px solid red;
         width: 95vw;
         height: 100vh;
@@ -53,11 +54,14 @@ body{
                 letter-spacing: .1rem;
 
                 &-visor{
+                    @include dflex(row, center);
                     // border: 1px solid;
                     border-radius: 10px;
                     background-color: #ccc;
                     width: 85%;
                     height: 30px;
+
+                    color: black;
                 }
                 &-autoatendimento{
                     @include dflex(column, center);
@@ -90,14 +94,22 @@ body{
                 &-titulo{
                     display: block;
                     text-align: center;
-                    width: 100%;
-                    height: auto;
-                    margin: 15% 0;
+                    margin: 10% 0;
                     
                     font-weight: bolder;
                     text-transform: capitalize;
 
                 }
+                &-tipo{
+                    // border: 1px solid;
+                    font-size: 1.2rem;
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    text-transform: uppercase;
+
+                }
+
                 &-senha{
                     display: block;
                     width: 100%;

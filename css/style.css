@@ -54,10 +54,16 @@ body .main .area-gera-senha .gera-senha {
   letter-spacing: 0.1rem;
 }
 body .main .area-gera-senha .gera-senha-visor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   background-color: #ccc;
   width: 85%;
   height: 30px;
+  color: black;
 }
 body .main .area-gera-senha .gera-senha-autoatendimento {
   display: flex;
@@ -84,11 +90,16 @@ body .main .area-gera-senha .gera-senha-ticket {
 body .main .area-gera-senha .gera-senha-ticket-titulo {
   display: block;
   text-align: center;
-  width: 100%;
-  height: auto;
-  margin: 15% 0;
+  margin: 10% 0;
   font-weight: bolder;
   text-transform: capitalize;
+}
+body .main .area-gera-senha .gera-senha-ticket-tipo {
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
 }
 body .main .area-gera-senha .gera-senha-ticket-senha {
   display: block;
