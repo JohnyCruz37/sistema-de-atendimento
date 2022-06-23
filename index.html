@@ -44,58 +44,63 @@
 
         <!-- GERENCIADOR DE SENHAS -->
         <section class="area-gerenciador">
-            <article class="gerenciador-titulo">
-                <h3>controle de senhas geradas</h3>
-            </article>
-            <div class="gerenciador-listas">
-                <article class="gerenciador-listas-fila lista">
-                    <div class="lista-titulo">
-                        <h3>Fila</h3>
-                    </div>
-                    <div class="lista-itens">
-                        <h4>p-001</h4>
-                        <h4>n-001</h4>
-                        <h4>n-002</h4>
-                        <h4>n-003</h4>
-                        <h4>n-004</h4>
-                    </div>
-                    
+            <div class="gerenciador">
+                <article class="gerenciador-titulo">
+                    <p>X</p>
+                    <h3>controle de senhas geradas</h3>
                 </article>
-                <article class="gerenciador-listas-preferencial lista">
-                    <div class="lista-titulo">
-                        <h3>preferencial</h3>
-                    </div>
-                    <div class="lista-itens">
-                        <h4>p-001</h4>
-                        <h4>p-002</h4>
-                        <h4>p-003</h4>
-                        <h4>p-004</h4>
-                        <h4>p-005</h4>
-                    </div>
+    
+                <article class="gerenciador-listas">
+                    <article class="gerenciador-listas-fila lista">
+                        <div class="lista-titulo">
+                            <h3>Fila</h3>
+                        </div>
+                        <div class="lista-itens">
+                            <h4>p-001</h4>
+                            <h4>n-001</h4>
+                            <h4>n-002</h4>
+                            <h4>n-003</h4>
+                            <h4>n-004</h4>
+                        </div>
+                        
+                    </article>
+                    <article class="gerenciador-listas-preferencial lista">
+                        <div class="lista-titulo">
+                            <h3>preferencial</h3>
+                        </div>
+                        <div class="lista-itens">
+                            <h4>p-001</h4>
+                            <h4>p-002</h4>
+                            <h4>p-003</h4>
+                            <h4>p-004</h4>
+                            <h4>p-005</h4>
+                        </div>
+                    </article>
+                    <article class="gerenciador-listas-normal lista">
+                        <div class="lista-titulo">
+                            <h3>normal</h3>
+                        </div>
+                        <div class="lista-itens">
+                            <h4>n-001</h4>
+                            <h4>n-002</h4>
+                            <h4>n-003</h4>
+                            <h4>n-004</h4>
+                            <h4>n-005</h4>
+                        </div>
+                    </article>
                 </article>
-                <article class="gerenciador-listas-normal lista">
-                    <div class="lista-titulo">
-                        <h3>normal</h3>
+                
+                <article class="gerenciador-botoes">
+                    <div class="normal-preferencial conjunto-botoes">
+                        <button class="botoes btn-gerenciador">normal</button>
+                        <button class="botoes btn-gerenciador">preferencial</button>
                     </div>
-                    <div class="lista-itens">
-                        <h4>n-001</h4>
-                        <h4>n-002</h4>
-                        <h4>n-003</h4>
-                        <h4>n-004</h4>
-                        <h4>n-005</h4>
+                    <div class="remover-reiniciar conjunto-botoes">
+                        <button class="botoes btn-gerenciador">remover senha</button>
+                        <button class="botoes btn-gerenciador">reiniciar</button>
                     </div>
                 </article>
             </div>
-            <article class="gerenciador-botoes">
-                <div class="normal-preferencial conjunto-botoes">
-                    <button class="botoes btn-gerenciador">normal</button>
-                    <button class="botoes btn-gerenciador">preferencial</button>
-                </div>
-                <div class="remover-reiniciar conjunto-botoes">
-                    <button class="botoes btn-gerenciador">remover senha</button>
-                    <button class="botoes btn-gerenciador">reiniciar</button>
-                </div>
-            </article>
         </section>
 
         <!-- MONITOR MOSTRANDO AS SENHAS -->
@@ -125,7 +130,7 @@
                         <h3>senha:</h3>
                         <h4>p - 004 </h4>
                     </div>
-                    
+
                     <div class="monitor-body-guiche">
                         <h3>guichê:</h3>
                         <h4>01 </h4>
@@ -150,16 +155,40 @@
             </div>
         </section>
 
-        <!-- HISTORICO DAS SENHAS ANTERIORES -->
+        <!-- GUICHE PARA CHAMAR AS SENHAS -->
         <section class="area-guiche">
-            <div class="guiche-titulo">
-                <h3>guichê 1</h3>
-            </div>
-            <div class="guiche-balcao"></div>
-            <div class="guiche-botoes">
-                <button>próximo</button>
-                <button>repetir chamada</button>
-            </div>
+            <article class="guiche">
+                <div class="guiche-titulo">
+                    <h3>guichê 1</h3>
+                </div>
+                <div class="guiche-balcao"></div>
+                <div class="guiche-botoes">
+                    <button class="botoes">próximo</button>
+                    <button class="botoes">repetir chamada</button>
+                </div>
+            </article>
+
+            <article class="guiche">
+                <div class="guiche-titulo">
+                    <h3>guichê 2</h3>
+                </div>
+                <div class="guiche-balcao"></div>
+                <div class="guiche-botoes">
+                    <button  class="botoes">próximo</button>
+                    <button  class="botoes">repetir chamada</button>
+                </div>
+            </article>
+
+            <article class="guiche">
+                <div class="guiche-titulo">
+                    <h3>guichê 3</h3>
+                </div>
+                <div class="guiche-balcao"></div>
+                <div class="guiche-botoes">
+                    <button  class="botoes">próximo</button>
+                    <button  class="botoes">repetir chamada</button>
+                </div>
+            </article>
         </section>
     </main>
 </body>
