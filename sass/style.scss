@@ -53,16 +53,6 @@ body{
                 color: white;
                 letter-spacing: .1rem;
 
-                &-visor{
-                    @include dflex(row, center);
-                    // border: 1px solid;
-                    border-radius: 10px;
-                    background-color: #ccc;
-                    width: 85%;
-                    height: 30px;
-
-                    color: black;
-                }
                 &-autoatendimento{
                     @include dflex(column, center);
                     // border: 1px solid orange;
@@ -107,6 +97,7 @@ body{
                     text-align: center;
                     padding: 5px;
                     text-transform: uppercase;
+                    letter-spacing: .1rem;
 
                 }
 
@@ -147,7 +138,7 @@ body{
         }
 
         .area-gerenciador{
-            background-color: rgba(0, 0, 0, 0.57);
+            background-color: rgba(0, 0, 0, 0.801);
             width: 100vw;
             height: 100vh;
             z-index: 2;
@@ -155,6 +146,10 @@ body{
             display: none;
 
             position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
 
             .gerenciador{
                 @include wheigth(100%);
@@ -287,6 +282,9 @@ body{
             }
 
         }
+        .area-gerenciador.abrir-gerenciador{
+            display: flex;
+        }
 
         .area-monitor{
             @include container;
@@ -322,18 +320,26 @@ body{
                         background-color: blue;
                         width: 50%;
                         height: 50%;
-                        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 30% 100%);
+                        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 27% 100%);
 
                         .hora{
-                            font-size: 1.2rem;
+                            // border: 1px solid yellow;
+                            font-size: 1.5rem;
                             color: white;
                         }
                         .dia{
                             text-align: center;
                             display: block;
                             padding: 5px;
-                            margin: 0 10px 0 35px;
+                            margin: 0 10px 0 15px;
                             color: white;
+
+                            &-data{
+                                margin-bottom: 5px;
+                            }
+                            &-data, &-semana{
+                                letter-spacing: .1rem;
+                            }
                         }
                     }
                     .header-tipo-atendimento{
@@ -433,7 +439,7 @@ body{
                 border: 1px solid;
                 border-radius: 25% 25% 0 0;
                 width: 30%;
-                max-width: 350px;
+                max-width: 320px;
                 height: 90%;
 
                 &-titulo{

@@ -20,12 +20,11 @@
         <section class="area-gera-senha">
             <!-- GERADOR DE SENHA -->
             <article class="gera-senha">
-                <div class="gera-senha-visor"></div>
                 <div class="gera-senha-autoatendimento">
                     <h3 class="gera-senha-autoatendimento-titulo">Escolha o tipo de atendimento</h3>
-                    <button class="botoes normal"> Normal </button>
-                    <button class="botoes preferencial">Preferencial</button>
-                    <button class="botoes gerenciador">Gerenciador</button>
+                    <button class="botoes normal" type="button"> Normal </button>
+                    <button class="botoes preferencial" type="button">Preferencial</button>
+                    <button class="botoes gerenciador" type="button">Gerenciador</button>
                 </div>
             </article>
 
@@ -47,7 +46,7 @@
         <section class="area-gerenciador">
             <div class="gerenciador">
                 <article class="gerenciador-titulo">
-                    <p>X</p>
+                    <p class="fecha-gerenciador">X</p>
                     <h3>controle de senhas geradas</h3>
                 </article>
     
@@ -57,11 +56,7 @@
                             <h3>Fila</h3>
                         </div>
                         <div class="lista-itens">
-                            <h4>p-001</h4>
-                            <h4>n-001</h4>
-                            <h4>n-002</h4>
-                            <h4>n-003</h4>
-                            <h4>n-004</h4>
+                            <!-- gerar um elemento h4 -->
                         </div>
                         
                     </article>
@@ -70,11 +65,7 @@
                             <h3>preferencial</h3>
                         </div>
                         <div class="lista-itens">
-                            <h4>p-001</h4>
-                            <h4>p-002</h4>
-                            <h4>p-003</h4>
-                            <h4>p-004</h4>
-                            <h4>p-005</h4>
+                            <!-- gerar um elemento h4 -->
                         </div>
                     </article>
                     <article class="gerenciador-listas-normal lista">
@@ -82,19 +73,16 @@
                             <h3>normal</h3>
                         </div>
                         <div class="lista-itens">
-                            <h4>n-001</h4>
-                            <h4>n-002</h4>
-                            <h4>n-003</h4>
-                            <h4>n-004</h4>
-                            <h4>n-005</h4>
+                            <!-- gerar um elemento h4 -->
+                            
                         </div>
                     </article>
                 </article>
                 
                 <article class="gerenciador-botoes">
                     <div class="normal-preferencial conjunto-botoes">
-                        <button class="botoes btn-gerenciador normal">normal</button>
-                        <button class="botoes btn-gerenciador preferencial">preferencial</button>
+                        <button class="botoes btn-gerenciador gerenciador-normal">normal</button>
+                        <button class="botoes btn-gerenciador gerenciador-preferencial">preferencial</button>
                     </div>
                     <div class="remover-reiniciar conjunto-botoes">
                         <button class="botoes btn-gerenciador">remover senha</button>
@@ -113,15 +101,15 @@
                     </div>
 
                     <div class="header-data">
-                        <div class="hora">12:00</div>
+                        <div class="hora"> 00:00 </div>
                         <div class="dia">
-                            <p>1 de janeiro de 2022</p>
-                            <p>Segunda feira</p>
+                            <p class="dia-data">1 de janeiro de 2022</p>
+                            <p class="dia-semana">dia semana</p>
                         </div>
                     </div>
                     
                     <div class="header-tipo-atendimento">
-                        <h2>preferencial</h2>
+                        <h2 class="tipo-monitor">sem atendimento</h2>
                     </div>
 
                 </article>
