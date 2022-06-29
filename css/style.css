@@ -44,16 +44,17 @@ body {
         background-color: #0e34a0;
         width: 60%;
         height: 80%;
+        padding: 10px;
         color: white;
         letter-spacing: .1rem; }
         body .main .area-gera-senha .gera-senha-autoatendimento {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
-          width: 85%;
-          height: 65%;
+          width: 100%;
+          height: 90%;
           margin-top: 15px;
           justify-content: space-around; }
           body .main .area-gera-senha .gera-senha-autoatendimento .gerenciador {
@@ -266,11 +267,9 @@ body {
             body .main .area-monitor .monitor-header .header-data .dia {
               text-align: center;
               display: block;
-              padding: 5px;
+              padding: 2px;
               margin: 0 10px 0 15px;
               color: white; }
-              body .main .area-monitor .monitor-header .header-data .dia-data {
-                margin-bottom: 5px; }
               body .main .area-monitor .monitor-header .header-data .dia-data, body .main .area-monitor .monitor-header .header-data .dia-semana {
                 letter-spacing: .1rem; }
           body .main .area-monitor .monitor-header .header-tipo-atendimento {

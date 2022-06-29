@@ -49,15 +49,15 @@ body{
                 background-color: $azul-anil;
                 width: 60%;
                 height: 80%;
+                padding: 10px;
 
                 color: white;
                 letter-spacing: .1rem;
 
                 &-autoatendimento{
-                    @include dflex(column, center);
+                    @include dflex(column, flex-start);
+                    @include wheigth(90%);
                     // border: 1px solid orange;
-                    width: 85%;
-                    height: 65%;
                     margin-top: 15px;
 
                     justify-content: space-around;
@@ -321,6 +321,7 @@ body{
                         width: 50%;
                         height: 50%;
                         clip-path: polygon(0% 0, 100% 0%, 100% 100%, 27% 100%);
+                        
 
                         .hora{
                             // border: 1px solid yellow;
@@ -330,13 +331,11 @@ body{
                         .dia{
                             text-align: center;
                             display: block;
-                            padding: 5px;
+                            padding: 2px;
                             margin: 0 10px 0 15px;
                             color: white;
 
-                            &-data{
-                                margin-bottom: 5px;
-                            }
+
                             &-data, &-semana{
                                 letter-spacing: .1rem;
                             }
