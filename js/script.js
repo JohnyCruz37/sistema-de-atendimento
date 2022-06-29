@@ -7,7 +7,8 @@ const btnPreferencial = document.querySelector(".preferencial");
 const btnGerenciador = document.querySelector(".gerenciador");
 
 // ELEMENTOS AREA DO TICKET
-const tipoTicket = document.querySelector('.gera-senha-ticket-tipo')
+const tipoTicket = document.querySelector('.gera-senha-ticket-tipo');
+const dataTicket = document.querySelector('.gera-senha-ticket-data')
 
 //ELEMENTOS DO GERENCIADOR DE SENHA
 const gerenciador = document.querySelector(".area-gerenciador");
@@ -23,7 +24,7 @@ const diaData = document.querySelector(".dia-data");
 const diaSemana = document.querySelector(".dia-semana")
 const tipoMonitor = document.querySelector('.tipo-monitor');
 
-
+var data = new Date();
 
 // FUNÇÕES
 
@@ -31,6 +32,7 @@ const tipoMonitor = document.querySelector('.tipo-monitor');
 const gerarSenha = (botao) => {
     alert("VOCÊ GEROU UMA SENHA DO TIPO: " + botao.textContent);
     tipoTicket.innerText = botao.textContent;
+    dataTicket.innerText = data.getDay(); 
 
     let prefixo;
 
@@ -54,8 +56,7 @@ const fechaGerenciador = () => {
     } 
 }
 
-//MONITOR
-var data = new Date();
+
 
 //Mostrar dia da semana
 const diaSemanaTexto = () =>{
@@ -86,11 +87,7 @@ const diaSemanaTexto = () =>{
 }
 
 
-// MOSTRAR HORA
-hora.innerText = data.getHours() + " : " + data.getMinutes(); 
 
-//MOSTRAR DIA DA SEMANA
-diaSemanaTexto();
 
 //BOTÕES
 btnNormal.addEventListener('click', () =>{
@@ -106,6 +103,13 @@ btnGPreferencial.addEventListener('click', () =>{
   gerarSenha(btnGPreferencial);
 });
 
+
+
+// MOSTRAR HORA
+hora.innerText = data.getHours() + " : " + data.getMinutes(); 
+
+//MOSTRAR DIA DA SEMANA
+diaSemanaTexto();
 btnGerenciador.addEventListener('click', abreGerenciador);
 xGerenciador.addEventListener('click', fechaGerenciador);
 
