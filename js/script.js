@@ -72,47 +72,44 @@ const senhaTexto = (p, array, texto) => {
   } else{
     texto.innerText = p + array.length;
   }
-
-
 }
 
 //ADICIONANDO PREFIXO A SENHA
 const tipoSenha = (botao, texto) => {
     let prefixo;
     if(botao.textContent === 'Preferencial'){
-      prefixo = 'P -';
+      prefixo = 'P - ';
 
       filaP.push(filaP.length + 1)
       senhaTexto(prefixo, filaP, texto);
 
 
     }else{
-      prefixo = 'N -';
+      prefixo = 'N - ';
 
       filaN.push(filaN.length + 1);
       senhaTexto(prefixo, filaN, texto);
-
     }
+
 }
 
 // FUNÇÕES
 // GERADOR DE SENHA
 const gerarSenha = (botao) => {
-    //FILA
-    console.log(fila)
     //TIPO DE ATENDIMENTO
     tipoTicket.innerText = botao.textContent;
 
     //NÚMERO SENHA
     tipoSenha(botao, numeroTicket);
-    
+    fila.push(numeroTicket.textContent)
+
+    //FILA
+    console.log(fila[fila.length - 1])
+
     //DATA SENHA
     diaSemanaTexto(data.getDay(), dataTicket);
 
     //PREVISÃO DE ESPERA SENHA
-  
-    
-
 }
 
 //ABRIR GERENCIADOR DE SENHA
