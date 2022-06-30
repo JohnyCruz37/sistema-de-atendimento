@@ -72,6 +72,9 @@ const senhaTexto = (p, array, texto) => {
   } else{
     texto.innerText = p + array.length;
   }
+
+
+
 }
 
 //ADICIONANDO PREFIXO A SENHA
@@ -82,15 +85,27 @@ const tipoSenha = (botao, texto) => {
 
       filaP.push(filaP.length + 1)
       senhaTexto(prefixo, filaP, texto);
-
-
+      
     }else{
       prefixo = 'N - ';
-
+      
       filaN.push(filaN.length + 1);
       senhaTexto(prefixo, filaN, texto);
+
     }
 
+}
+
+//ADICIONAR A SENHA AO GERENCIADOR
+
+const listaSenha = (array, fila) => {
+  fila.innerHTML = '';
+
+  for (let i = 0; i < array.length; i++) {
+    let novaSenha = document.createElement('h4');
+    novaSenha.innerHTML = array[i];
+    fila.appendChild(novaSenha);
+  }
 }
 
 // FUNÇÕES
@@ -104,13 +119,19 @@ const gerarSenha = (botao) => {
     fila.push(numeroTicket.textContent)
 
     //FILA
-    console.log(fila[fila.length - 1])
+    listaSenha(fila, filaTodos)
+
 
     //DATA SENHA
     diaSemanaTexto(data.getDay(), dataTicket);
 
-    //PREVISÃO DE ESPERA SENHA
+    
 }
+
+
+
+
+
 
 //ABRIR GERENCIADOR DE SENHA
 const abreGerenciador = () => {
@@ -123,13 +144,6 @@ const fechaGerenciador = () => {
         gerenciador.classList.remove('abrir-gerenciador');
     } 
 }
-
-
-
-
-
-
-
 
 //BOTÕES
 
