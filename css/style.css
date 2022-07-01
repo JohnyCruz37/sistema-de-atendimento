@@ -110,7 +110,7 @@ body {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      display: none;
+      display: flex;
       position: absolute;
       top: 0;
       right: 0;

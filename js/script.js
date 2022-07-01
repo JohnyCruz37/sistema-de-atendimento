@@ -94,12 +94,6 @@ const tipoSenha = (botao, texto) => {
       senhaTexto(prefixo, filaN, texto);
 
     }
-    // if(prefixo[0]=== 'P'){
-    //   // filaP.push(texto.textContent)
-    //   listaSenha(filaP, filaPreferencial)
-    // } else {
-    //   console.log(prefixo[0])
-    // }
 }
 
 //ADICIONAR A SENHA AO GERENCIADOR
@@ -107,28 +101,37 @@ const listaSenha = (array, fila) => {
   fila.innerHTML = '';
   
   for (let i = 0; i < array.length; i++) {
-    
     let novaSenha = document.createElement('h4');
     novaSenha.innerHTML = array[i];
     fila.appendChild(novaSenha);
   }
+  
 }
 
-//ANALISAR INICIAL DA STRING SENHA
+//ANALISAR INICIAL DA STRING SENHA E ADICINAR A FILA CORRETA
 const prefixoSenha = (texto, fila1, fila2) => {
   let p = document.createElement('h4');
 
-  for (let i = 0; i < fila.length; i++) {
+
     if(texto.indexOf('P')!== -1){          
         p.innerText = texto;
-        fila1.appendChild(p); 
- 
+        fila1.appendChild(p);
+
     } else {
       p.innerText = texto;
       fila2.appendChild(p);
     }
-    
-  }  
+
+}
+
+//ORGANIZAR SENHAS NA FILA
+const organizarFila = (texto, array) => {
+  if (texto.indexOf('P') !== -1) {
+    array.unshift(texto)
+
+  } else{
+    array.push(texto);
+  }
 }
 
 //REINICIAR ARRAY
@@ -147,10 +150,11 @@ const gerarSenha = (botao) => {
 
     //NÚMERO SENHA
     tipoSenha(botao, numeroTicket);
-    fila.push(numeroTicket.textContent)
-
+    
     //FILA
-    listaSenha(fila, filaTodos)
+    organizarFila(numeroTicket.textContent, fila);
+    listaSenha(fila, filaTodos);
+
     //SEPARA AS SENHAS POR PREFIXO E MOSTRA NA LISTA DO GERENCIADOR
     prefixoSenha(numeroTicket.textContent, filaPreferencial, filaNormal)
 
