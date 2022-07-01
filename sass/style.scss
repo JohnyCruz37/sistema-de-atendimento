@@ -221,10 +221,13 @@ body{
     
                     .lista{
                         border: 1px solid;
+                        background-color: #ddd;
                         width: 25%;
                         height: 80%;
                         
                         text-align: center;
+
+                        overflow: auto;
     
                         &-titulo{
                             @include dflex(row, center);

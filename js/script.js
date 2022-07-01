@@ -114,7 +114,7 @@ const listaSenha = (array, fila) => {
 }
 
 //ANALISAR INICIAL DA STRING SENHA
-const prefixoSenha = (texto, fila1) => {
+const prefixoSenha = (texto, fila1, fila2) => {
   let p = document.createElement('h4');
 
   for (let i = 0; i < fila.length; i++) {
@@ -122,7 +122,11 @@ const prefixoSenha = (texto, fila1) => {
         p.innerText = texto;
         fila1.appendChild(p); 
  
+    } else {
+      p.innerText = texto;
+      fila2.appendChild(p);
     }
+    
   }  
 }
 
@@ -139,7 +143,7 @@ const gerarSenha = (botao) => {
 
     //FILA
     listaSenha(fila, filaTodos)
-    prefixoSenha(numeroTicket.textContent, filaPreferencial)
+    prefixoSenha(numeroTicket.textContent, filaPreferencial, filaNormal)
 
     //DATA SENHA
     diaSemanaTexto(data.getDay(), dataTicket);
