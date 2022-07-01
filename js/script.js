@@ -93,20 +93,39 @@ const tipoSenha = (botao, texto) => {
       senhaTexto(prefixo, filaN, texto);
 
     }
-
+    // if(prefixo[0]=== 'P'){
+    //   // filaP.push(texto.textContent)
+    //   listaSenha(filaP, filaPreferencial)
+    // } else {
+    //   console.log(prefixo[0])
+    // }
 }
 
 //ADICIONAR A SENHA AO GERENCIADOR
-
 const listaSenha = (array, fila) => {
   fila.innerHTML = '';
-
+  
   for (let i = 0; i < array.length; i++) {
+    
     let novaSenha = document.createElement('h4');
     novaSenha.innerHTML = array[i];
     fila.appendChild(novaSenha);
   }
 }
+
+//ANALISAR INICIAL DA STRING SENHA
+const prefixoSenha = (texto, fila1) => {
+  let p = document.createElement('h4');
+
+  for (let i = 0; i < fila.length; i++) {
+    if(texto.indexOf('P')!== -1){          
+        p.innerText = texto;
+        fila1.appendChild(p); 
+ 
+    }
+  }  
+}
+
 
 // FUNÇÕES
 // GERADOR DE SENHA
@@ -120,14 +139,13 @@ const gerarSenha = (botao) => {
 
     //FILA
     listaSenha(fila, filaTodos)
-
+    prefixoSenha(numeroTicket.textContent, filaPreferencial)
 
     //DATA SENHA
     diaSemanaTexto(data.getDay(), dataTicket);
 
     
 }
-
 
 
 
