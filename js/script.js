@@ -16,6 +16,7 @@ const gerenciador = document.querySelector(".area-gerenciador");
 const xGerenciador = document.querySelector(".fecha-gerenciador");
 const btnGNormal = document.querySelector(".gerenciador-normal");
 const btnGPreferencial = document.querySelector(".gerenciador-preferencial");
+const btnReiniciar = document.querySelector(".gerenciador-reiniciar");
 const filaTodos = document.querySelector('.div-fila');
 const filaPreferencial = document.querySelector('.div-preferencial');
 const filaNormal = document.querySelector('.div-normal');
@@ -130,6 +131,13 @@ const prefixoSenha = (texto, fila1, fila2) => {
   }  
 }
 
+//REINICIAR ARRAY
+const limparArray = (array) => {
+  array.length = 0;
+}
+
+
+
 
 // FUNÇÕES
 // GERADOR DE SENHA
@@ -143,12 +151,12 @@ const gerarSenha = (botao) => {
 
     //FILA
     listaSenha(fila, filaTodos)
+    //SEPARA AS SENHAS POR PREFIXO E MOSTRA NA LISTA DO GERENCIADOR
     prefixoSenha(numeroTicket.textContent, filaPreferencial, filaNormal)
 
     //DATA SENHA
     diaSemanaTexto(data.getDay(), dataTicket);
-
-    
+   
 }
 
 
@@ -169,15 +177,7 @@ const fechaGerenciador = () => {
 
 //BOTÕES
 
-//botões do gerador de senha
-btnNormal.addEventListener('click', () =>{
-  gerarSenha(btnNormal);
-});
-btnPreferencial.addEventListener('click', () =>{
-  gerarSenha(btnPreferencial);
-});
-
-//botões do gerenciador de senha
+//BOTÕES DO GERENCIADOR DE SENHA
 btnGerenciador.addEventListener('click', abreGerenciador);
 xGerenciador.addEventListener('click', fechaGerenciador);
 
@@ -189,6 +189,27 @@ btnGPreferencial.addEventListener('click', () =>{
   gerarSenha(btnPreferencial);
 });
 
+btnReiniciar.addEventListener('click', () => {
+  filaTodos.innerHTML = '';
+  filaNormal.innerHTML = '';
+  filaPreferencial.innerHTML = '';
+
+  limparArray(fila);
+  limparArray(filaN);
+  limparArray(filaP);
+
+})
+
+
+
+//BOTÕES DO GERADOR DE SENHA
+btnNormal.addEventListener('click', () =>{
+  gerarSenha(btnNormal);
+});
+
+btnPreferencial.addEventListener('click', () =>{
+  gerarSenha(btnPreferencial);
+});
 
 
 // MOSTRAR HORA
